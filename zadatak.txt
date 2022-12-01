@@ -1,0 +1,49 @@
+ZADATAK:
+
+U privitku su dvije datoteke, 'carrier-plans.csv' i 'resale-plans.csv', koje sadrze podatke o pretplatnicima.
+Svaki redak sadrzi informacije o jednom pretplatniku.
+Polja u svakom retku su odvojena zarezom (CSV [1] format).
+Ono sto ih povezuje je pretplatnikov telefonski broj odnosno MDN [2].
+Podatke iz dvije datoteke potrebno je povezati na osnovu MDN-a.
+Iz povezanih podataka potrebno je generirati sljedece datoteke odnosno izvjestaje:
+
+
+(1) Datoteku sa svim povezanim podacima i poljima: MDN, Resale Plan, Sprint Plan i SOCs. Primjer:
+
+MDN,Resale Plan,Sprint Plan,SOCs
+9172631596,MRC-0M,DSMDATA63,DSMBAIC;DSMOCBLK;DSMREALM4
+6463191408,MRC-50M,DSMDATA66,DSMBAIC;DSMOCBLK;DSMREALM5;DSMSMSBLK
+6462459163,MRC-0M,DSMDATA63,DSMBAIC;DSMOCBLK;DSMREALM4
+6462987584,MRC-0M,DSMDATA63,DSMBAIC;DSMOCBLK;DSMREALM4
+
+
+(2) Datoteku sa povezanim podacima i poljima: MDN, Resale Plan, Sprint Plan i poljem 'LTE SOC' cija vrijednost se postavlja na vrijednost 'Y' ili 'N', ovisno da li se u polju SOCs u ulaznoj datoteci nalazi vrijednost 'DSMLTESOC'. Primjer:
+ 
+MDN,Resale Plan,Sprint Plan,LTE SOC
+9172631596,MRC-0M,DSMDATA63,N
+6463191408,MRC-50M,DSMDATA66,N
+6462426983,MRC-50M,DSMDATA66,Y
+6462424796,MRC-0M,DSMDATA63,Y
+
+
+(3) Datoteku sa razdiobom pretplatnika po resale planu tj. koliko pretplatnika se nalazi na kojem resale planu. Primjer:
+
+Resale Plan,Number of Devices
+MRC-25M,7
+MRC-100M,506
+MRC-10M,1736
+
+
+---
+
+
+RJESENJE:
+
+Kandidat mora napisati program u programskom jeziku po vlastitom izboru koji kao parametre prima dvije ulazne datoteke i kao rezultat kreira tri datoteke sa gore navedenim izvjestajima.
+
+
+---
+
+[1] Comma-Separated Values
+[2] Mobile Directory Number
+
